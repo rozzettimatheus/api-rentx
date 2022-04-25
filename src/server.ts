@@ -1,5 +1,7 @@
 import express from 'express';
+import 'reflect-metadata';
 
+import './database';
 import { router } from './routes';
 
 const app = express();
@@ -7,4 +9,5 @@ const app = express();
 app.use(express.json());
 app.use('/api', router);
 
-app.listen(3333, () => console.log('server is running'));
+const port = process.env.PORT || 3333;
+app.listen(port, () => console.log('server is running'));

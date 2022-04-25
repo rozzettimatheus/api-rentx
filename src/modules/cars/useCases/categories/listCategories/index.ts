@@ -4,7 +4,7 @@ import { ListCategoriesUseCase } from './ListCategoriesUseCase';
 
 // fazer sempre do inverso (rota -> controller -> useCase -> repositorio)
 
-const repository = CategoriesRepository.getInstance();
+const repository = null;
 const listCategoriesUseCase = new ListCategoriesUseCase(repository);
 const listCategoriesController = new ListCategoriesController(
   listCategoriesUseCase
